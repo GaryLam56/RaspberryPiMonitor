@@ -1,6 +1,7 @@
 import os
 import sys
 import site
+from django.core.wsgi import get_wsgi_application
 
 # Add the site-packages of the chosen virtualenv to work with
 site.addsitedir('/home/pi/py3env/lib/python3.4/site-packages')
@@ -16,8 +17,4 @@ activate_env=os.path.expanduser("/home/pi/py3env/bin/activate_this.py")
 # execfile(activate_env, dict(__file__=activate_env))
 exec(compile(open(activate_env, "rb").read(), activate_env, 'exec'), dict(__file__=activate_env))
 
-import django.core.handlers.wsgi
-application = django.core.handlers.wsgi.WSGIHandler()
-
-from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
