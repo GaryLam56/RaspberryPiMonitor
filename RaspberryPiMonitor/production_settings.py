@@ -13,7 +13,7 @@ SECRET_KEY = '=3ai06-$-wrhepsh2o)dq2ys^o8y!v+al1so*^z1c2gevwk-iu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['209.6.200.230']
+ALLOWED_HOSTS = ['.perfectkiwi.xyz']
 
 
 # Application definition
@@ -107,4 +107,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR + '/staticfiles/'
+
+STATICFILES_DIRS = (
+    BASE_DIR + '/monitor/static/',
+)
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
