@@ -9,7 +9,7 @@ site.addsitedir('/home/pi/py3env/lib/python3.4/site-packages')
 sys.path.append('/home/pi/RaspberryPiMonitor/')
 sys.path.append('/home/pi/RaspberryPiMonitor/RaspberryPiMonitor')
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'RaspberryPiMonitor.production_settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'RaspberryPiMonitor.settings'
 
 # Activate your virtual env
 activate_env=os.path.expanduser("/home/pi/py3env/bin/activate_this.py")
