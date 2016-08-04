@@ -56,7 +56,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'RaspberryPiMonitor.wsgi.application'
+# WSGI_APPLICATION = 'RaspberryPiMonitor.wsgi.application'
 
 
 # Database
