@@ -3,6 +3,7 @@ import os
 from rest_framework import generics
 from monitor.serializers import PiSerializer
 from monitor.models import Raspberry
+from .forms import RaspberryForm
 
 
 def index(request):
@@ -14,7 +15,11 @@ def index(request):
         mem_stats = getRamStats()
         # cpu_stats = getCPUStats()
         temp = getTemperature()
-        return render(request, 'monitor/index.html', {'mem_stats': mem_stats})
+        form = RaspberryForm(request.POST or None, request.FILES or None)
+        pi = form.save(commit=False)
+        pi.temperature = temp
+        pi.memory_used = mem_stats[1]
+        return render(request, 'monitor/index.html', {'mem_stats': mem_stats, 'temp': temp})
 
 
 def getRamStats():

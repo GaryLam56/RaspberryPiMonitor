@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20758c82-cf43-4b6a-9769-9a089376a7fe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/monitor/serializers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/monitor/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/monitor/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RaspberryPiMonitor/production_settings.py" afterPath="$PROJECT_DIR$/RaspberryPiMonitor/production_settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RaspberryPiMonitor/test_settings.py" afterPath="$PROJECT_DIR$/RaspberryPiMonitor/test_settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RaspberryPiMonitor/urls.py" afterPath="$PROJECT_DIR$/RaspberryPiMonitor/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/monitor/models.py" afterPath="$PROJECT_DIR$/monitor/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/monitor/views.py" afterPath="$PROJECT_DIR$/monitor/views.py" />
     </list>
     <ignored path="RaspberryPiMonitor.iws" />
@@ -31,11 +26,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="test_settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RaspberryPiMonitor/test_settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="103" column="13" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
+            <state relative-caret-position="878">
+              <caret line="93" column="52" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="production_settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RaspberryPiMonitor/production_settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="436">
+              <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="production_settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://F:/DoTanalyzer/DoTanalyzer/production_settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-612">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -47,6 +62,30 @@
             <state relative-caret-position="0">
               <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/monitor/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/monitor/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="73" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,12 +103,12 @@
         </entry>
       </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/monitor/views.py">
+        <entry file="file://F:/DoTanalyzer/analyze/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="476">
+              <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="36" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,28 +122,6 @@
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RaspberryPiMonitor/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="production_settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RaspberryPiMonitor/production_settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="674">
-              <caret line="121" column="26" selection-start-line="121" selection-start-column="26" selection-end-line="121" selection-end-column="26" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -124,13 +141,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/RaspberryPiMonitor/production_settings.py" />
         <option value="$PROJECT_DIR$/monitor/serializers.py" />
-        <option value="$PROJECT_DIR$/monitor/views.py" />
         <option value="$PROJECT_DIR$/RaspberryPiMonitor/test_settings.py" />
         <option value="$PROJECT_DIR$/monitor/urls.py" />
         <option value="$PROJECT_DIR$/RaspberryPiMonitor/urls.py" />
         <option value="$PROJECT_DIR$/monitor/models.py" />
+        <option value="$PROJECT_DIR$/monitor/forms.py" />
+        <option value="$PROJECT_DIR$/monitor/views.py" />
+        <option value="$PROJECT_DIR$/RaspberryPiMonitor/production_settings.py" />
       </list>
     </option>
   </component>
@@ -535,11 +553,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RaspberryPiMonitor/production_settings.py">
+    <entry file="file://$USER_HOME$/Desktop/New folder/Music_Server/music/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="121" column="26" selection-start-line="121" selection-start-column="26" selection-end-line="121" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="357">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -553,12 +573,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/New folder/Music_Server/music/models.py">
+    <entry file="file://F:/DoTanalyzer/analyze/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="25" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitor/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitor/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -569,6 +607,16 @@
           <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/DoTanalyzer/analyze/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -585,26 +633,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/monitor/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="289">
+          <caret line="17" column="73" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/monitor/serializers.py">
+    <entry file="file://$PROJECT_DIR$/RaspberryPiMonitor/test_settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+        <state relative-caret-position="878">
+          <caret line="93" column="52" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RaspberryPiMonitor/test_settings.py">
+    <entry file="file://F:/DoTanalyzer/DoTanalyzer/production_settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="103" column="13" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
+        <state relative-caret-position="-612">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RaspberryPiMonitor/production_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
           <folding />
         </state>
       </provider>
