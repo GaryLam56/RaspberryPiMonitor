@@ -15,7 +15,7 @@ def index(request):
     temp = getTemperature()
     form = RaspberryForm(request.POST or None, request.FILES or None)
     pi = form.save(commit=False)
-    pi.temperature = temp
+    pi.temperature = os.popen("vcgencmd measure_temp").readline()[5:-3]
     pi.memory_used = int(mem_stats[1][:-1])
     pi.save()
     return render(request, 'monitor/index.html')
@@ -31,7 +31,7 @@ def getRamStats():
 
 def getTemperature():
     # returns temperature in celcius
-    return (os.popen("vcgencmd measure_temp").readline()[5:-3])
+    return os.popen("vcgencmd measure_temp").readline()[5:-3]
 
 
 class MonitorList(generics.ListCreateAPIView):
