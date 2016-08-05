@@ -17,6 +17,7 @@ def index(request):
     pi = form.save(commit=False)
     pi.temperature = temp
     pi.memory_used = mem_stats[1]
+    pi.save()
     return render(request, 'monitor/index.html')
 
 
