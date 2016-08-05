@@ -17,6 +17,7 @@ def index(request):
         temp = getTemperature()
         form = RaspberryForm(request.POST or None, request.FILES or None)
         pi = form.save(commit=False)
+        pi.user = request.user
         pi.temperature = temp
         pi.memory_used = mem_stats[1]
         return render(request, 'monitor/index.html', {'mem_stats': mem_stats, 'temp': temp})
