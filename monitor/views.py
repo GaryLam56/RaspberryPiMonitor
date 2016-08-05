@@ -4,7 +4,6 @@ from rest_framework import generics
 from monitor.serializers import PiSerializer
 from monitor.models import Raspberry
 from .forms import RaspberryForm
-import Float
 
 
 def index(request):
