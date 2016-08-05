@@ -8,18 +8,18 @@ from .forms import RaspberryForm
 
 def index(request):
     # if user is not logged in make them
-    if not request.user.is_authenticated():
-        return render(request, 'monitor/login_user.html')
-    else:
+    #if not request.user.is_authenticated():
+    #   return render(request, 'monitor/login_user.html')
+    #else:
         # Displays the main page/List all of the user's files
-        mem_stats = getRamStats()
-        # cpu_stats = getCPUStats()
-        temp = getTemperature()
-        form = RaspberryForm(request.POST or None, request.FILES or None)
-        pi = form.save(commit=False)
-        pi.temperature = temp
-        pi.memory_used = mem_stats[1]
-        return render(request, 'monitor/index.html', {'mem_stats': mem_stats, 'temp': temp})
+    mem_stats = getRamStats()
+    # cpu_stats = getCPUStats()
+    temp = getTemperature()
+    form = RaspberryForm(request.POST or None, request.FILES or None)
+    pi = form.save(commit=False)
+    pi.temperature = temp
+    pi.memory_used = mem_stats[1]
+    return render(request, 'monitor/index.html', {'mem_stats': mem_stats, 'temp': temp})
 
 
 def getRamStats():
