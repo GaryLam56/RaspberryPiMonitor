@@ -4,6 +4,7 @@ from rest_framework import generics
 from monitor.serializers import PiSerializer
 from monitor.models import Raspberry
 from .forms import RaspberryForm
+import Float
 
 
 def index(request):
@@ -31,7 +32,7 @@ def getRamStats():
 
 def getTemperature():
     # returns temperature in celcius
-    return float(os.popen("vcgencmd measure_temp").readline()[5:-2])
+    return float(os.popen("vcgencmd measure_temp").readline()[5:-3])
 
 
 class MonitorList(generics.ListCreateAPIView):
