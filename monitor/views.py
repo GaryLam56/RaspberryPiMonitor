@@ -34,7 +34,7 @@ def getTemperature():
     # returns temperature in celcius
     print(sys.stderr, float(os.popen("sudo vcgencmd measure_temp").readline()[5:-3]))
     print(sys.stderr, float(os.popen("sudo vcgencmd measure_temp").readline()[5:-3])/5)
-    res = os.popen('vcgencmd measure_temp').readline()
+    res = os.popen('sudo vcgencmd measure_temp').readline()
     return float(res[5:-3])
 
 
