@@ -32,7 +32,7 @@ def getRamStats():
 
 def getTemperature():
     # returns temperature in celcius
-    return sys.stderr, float(os.popen("sudo vcgencmd measure_temp").readline()[5:-3])
+    return float(os.popen("sudo vcgencmd measure_temp").readline()[5:-3])
 
 
 class MonitorList(generics.ListCreateAPIView):
