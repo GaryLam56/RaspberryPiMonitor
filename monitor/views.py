@@ -32,12 +32,12 @@ def getRamStats():
 
 def getTemperature():
     # returns temperature in celcius
-    free = os.popen("vcgencmd measure_temp")
+    free = os.popen("sudo vcgencmd measure_temp")
     print(sys.stderr, free)
     print(sys.stderr, free.readline())
-    print(sys.stderr, os.popen("vcgencmd measure_temp"))
-    print(sys.stderr, os.popen("vcgencmd measure_temp").readline())
-    print(sys.stderr, os.popen("vcgencmd measure_temp").readline()[5:-3])
+    print(sys.stderr, os.popen("sudo vcgencmd measure_temp"))
+    print(sys.stderr, os.popen("sudo vcgencmd measure_temp").readline())
+    print(sys.stderr, os.popen("sudo vcgencmd measure_temp").readline()[5:-3])
     return os.popen("vcgencmd measure_temp").readline()[5:-3]
 
 
