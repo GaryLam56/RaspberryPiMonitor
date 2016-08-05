@@ -12,7 +12,8 @@ SECRET_KEY = '=3ai06-$-wrhepsh2o)dq2ys^o8y!v+al1so*^z1c2gevwk-iu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
+#DEBUG = True
+#ALLOWED_HOST = []
 ALLOWED_HOSTS = ['.perfectkiwi.xyz']
 
 
