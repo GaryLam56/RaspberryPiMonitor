@@ -4,6 +4,9 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="myapp" />
+    <orderEntry type="module" module-name="henrix" />
+    <orderEntry type="module" module-name="hendrix_demo" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_FOLDERS">

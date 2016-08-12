@@ -19,7 +19,8 @@ def index(request):
     pi.temperature = temp
     pi.memory_used = int(mem_stats[1][:-1])
     pi.save()
-    return render(request, 'monitor/index.html')
+    context = {"mem_stats": mem_stats, "temp": temp}
+    return render(request, 'monitor/index.html', context)
 
 
 def getRamStats():

@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/RaspberryPiMonitor.iml" filepath="$PROJECT_DIR$/.idea/RaspberryPiMonitor.iml" />
+      <module fileurl="file://F:/hendrix_demo/.idea/hendrix_demo.iml" filepath="F:/hendrix_demo/.idea/hendrix_demo.iml" />
+      <module fileurl="file://F:/henrix/.idea/henrix.iml" filepath="F:/henrix/.idea/henrix.iml" />
+      <module fileurl="file://F:/myapp/.idea/myapp.iml" filepath="F:/myapp/.idea/myapp.iml" />
     </modules>
   </component>
 </project>
