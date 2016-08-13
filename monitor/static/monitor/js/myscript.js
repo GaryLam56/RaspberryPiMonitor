@@ -14,6 +14,7 @@ function update() {
                         "aria-valuemax": (json.mem_total),
                         "aria-valuenow": (json.mem_used)
                     });
+                    $( "#memory" ).prepend(x + "%");
                 },
                 error: function () {
                     alert("error!");
