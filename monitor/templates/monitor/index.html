@@ -25,8 +25,7 @@
             dataType: "json",
             data:{ csrfmiddlewaretoken: '{{ csrf_token }}' },
             success: function(json) {
-                $("#output").html(json.message);
-                alert("success!");
+                $("#output").html(json.temp);
             },
             error:function() {
                 alert("error!");
