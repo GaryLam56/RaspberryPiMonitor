@@ -9,6 +9,30 @@
 
     <p>{{ mem_stats }}</p>
     <p>{{ temp }}</p>
+    <button type="button" id="btn">Update</button>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+    $("#btn").click(function(){
+
+        $.ajax({
+            type: "POST",
+            url: "eventData/",
+            data:{
+                null
+            },
+            success:function() {
+                alert("updated!");
+            },
+            error:function() {
+                alert("error!");
+            }
+        });
+    });
+    });
+
+</script>
 
 </body>
 </html>

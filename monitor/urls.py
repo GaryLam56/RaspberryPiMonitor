@@ -7,6 +7,7 @@ app_name = 'monitor'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^api/$', views.MonitorList.as_view()),
+    url(r'^test/$', views.test, name='test'),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

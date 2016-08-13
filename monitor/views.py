@@ -36,6 +36,14 @@ def getTemperature():
     return float(os.popen("sudo vcgencmd measure_temp").readline()[5:-3])
 
 
+def test(request):
+    if request.method == 'POST':
+        temp = getTemperature()
+        mem_stats = getRamStats()
+        context = {"mem_stats": mem_stats, "temp": temp}
+        return render(request, 'monitor/index.html', context)
+
+
 class MonitorList(generics.ListCreateAPIView):
     queryset = Raspberry.objects.all()
     serializer_class = PiSerializer
