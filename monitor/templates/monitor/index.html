@@ -23,9 +23,7 @@
             type: "GET",
             url: "/test/",
             dataType: "json",
-            data:{
-                csrfmiddlewaretoken: '{{ csrf_token }}'
-            },
+            data:{ csrfmiddlewaretoken: '{{ csrf_token }}' },
             success: function(json) {
                 $('#output').html(json.message);
                 alert("success!");
