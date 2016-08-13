@@ -41,7 +41,7 @@ def getTemperature():
 def test(request):
     if request.method == 'GET':
         response_data = {}
-        response_data['temp'] = getTemperature()
+        response_data['message'] = getTemperature()
         response_data['mem_stats'] = int(getRamStats()[1][:-1])
         return HttpResponse(json.dumps(response_data), content_type="application/json")
 
