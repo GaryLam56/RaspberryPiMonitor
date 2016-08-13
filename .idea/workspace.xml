@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20758c82-cf43-4b6a-9769-9a089376a7fe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/monitor/static/monitor/js/myscript.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/monitor/static/monitor/css/style.css" afterPath="$PROJECT_DIR$/monitor/static/monitor/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/monitor/templates/monitor/index.html" afterPath="$PROJECT_DIR$/monitor/templates/monitor/index.html" />
     </list>
     <ignored path="RaspberryPiMonitor.iws" />
@@ -45,13 +43,14 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/monitor/templates/monitor/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+            <state relative-caret-position="629">
+              <caret line="37" column="62" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />
               <folding>
-                <marker date="1471104518745" expanded="true" signature="1321:1948" ph="..." />
-                <marker date="1471104518745" expanded="true" signature="1484:1657" ph="..." />
-                <marker date="1471104518745" expanded="true" signature="1484:1887" ph="..." />
-                <marker date="1471104518745" expanded="true" signature="1657:1824" ph="..." />
+                <marker date="1471104654521" expanded="true" signature="1321:1966" ph="..." />
+                <marker date="1471104654521" expanded="true" signature="1484:1657" ph="..." />
+                <marker date="1471104654521" expanded="true" signature="1484:1905" ph="..." />
+                <marker date="1471104654521" expanded="true" signature="1665:1674" ph="..." />
+                <marker date="1471104654521" expanded="true" signature="1675:1842" ph="..." />
               </folding>
             </state>
           </provider>
@@ -815,13 +814,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/monitor/templates/monitor/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+        <state relative-caret-position="629">
+          <caret line="37" column="62" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />
           <folding>
-            <marker date="1471104518745" expanded="true" signature="1321:1948" ph="..." />
-            <marker date="1471104518745" expanded="true" signature="1484:1657" ph="..." />
-            <marker date="1471104518745" expanded="true" signature="1484:1887" ph="..." />
-            <marker date="1471104518745" expanded="true" signature="1657:1824" ph="..." />
+            <marker date="1471104654521" expanded="true" signature="1321:1966" ph="..." />
+            <marker date="1471104654521" expanded="true" signature="1484:1657" ph="..." />
+            <marker date="1471104654521" expanded="true" signature="1484:1905" ph="..." />
+            <marker date="1471104654521" expanded="true" signature="1665:1674" ph="..." />
+            <marker date="1471104654521" expanded="true" signature="1675:1842" ph="..." />
           </folding>
         </state>
       </provider>
