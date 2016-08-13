@@ -42,13 +42,13 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/monitor/templates/monitor/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+            <state relative-caret-position="374">
+              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
               <folding>
-                <marker date="1471102856966" expanded="true" signature="1111:1749" ph="..." />
-                <marker date="1471102856966" expanded="true" signature="1274:1443" ph="..." />
-                <marker date="1471102856966" expanded="true" signature="1274:1688" ph="..." />
-                <marker date="1471102856966" expanded="true" signature="1458:1625" ph="..." />
+                <marker date="1471103014285" expanded="true" signature="1126:1764" ph="..." />
+                <marker date="1471103014285" expanded="true" signature="1289:1458" ph="..." />
+                <marker date="1471103014285" expanded="true" signature="1289:1703" ph="..." />
+                <marker date="1471103014285" expanded="true" signature="1473:1640" ph="..." />
               </folding>
             </state>
           </provider>
@@ -720,13 +720,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/monitor/templates/monitor/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+        <state relative-caret-position="374">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding>
-            <marker date="1471102856966" expanded="true" signature="1111:1749" ph="..." />
-            <marker date="1471102856966" expanded="true" signature="1274:1443" ph="..." />
-            <marker date="1471102856966" expanded="true" signature="1274:1688" ph="..." />
-            <marker date="1471102856966" expanded="true" signature="1458:1625" ph="..." />
+            <marker date="1471103014285" expanded="true" signature="1126:1764" ph="..." />
+            <marker date="1471103014285" expanded="true" signature="1289:1458" ph="..." />
+            <marker date="1471103014285" expanded="true" signature="1289:1703" ph="..." />
+            <marker date="1471103014285" expanded="true" signature="1473:1640" ph="..." />
           </folding>
         </state>
       </provider>

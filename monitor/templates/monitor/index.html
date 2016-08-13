@@ -24,7 +24,7 @@
                 data:{ csrfmiddlewaretoken: '{{ csrf_token }}' },
                 success: function(json) {
                     $("#output").html(function() {
-                        var x = json.temp/100;
+                        var x = (json.temp + '%').toString();
                         return " \
                                                     <div class='container'> \
                                                       <h2>Basic Progress Bar</h2> \
