@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <head>
     {% load staticfiles %}
     <meta charset="UTF-8">
@@ -9,7 +10,7 @@
 
     <p>{{ mem_stats }}</p>
     <p>{{ temp }}</p>
-    <button type="button" id="btn">Update</button>
+    <button type="button" id="btn">Update</button>{% csrf_token %}
 
 <script type="text/javascript">
 
@@ -19,9 +20,6 @@
         $.ajax({
             type: "POST",
             url: "eventData/",
-            data:{
-                null
-            },
             success:function() {
                 alert("updated!");
             },
