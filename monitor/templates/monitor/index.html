@@ -24,11 +24,11 @@
             url: "/test/",
             dataType: "json",
             data:{
-                csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+                csrfmiddlewaretoken: '{{ csrf_token }}'
             },
-            success:function(json) {
+            success: function(json) {
                 $('#output').html(json.message);
-                alert("error!");
+                alert("success!");
             },
             error:function() {
                 alert("error!");
