@@ -7,33 +7,28 @@
     <title>Hello</title>
 </head>
 <body>
-
     <p>{{ mem_stats }}</p>
     <p>{{ temp }}</p>
-    <p id="output">default</p>
-    <button type="button" id="btn">{% csrf_token %}
-        Update
-    </button>
+    <div id="output">default</div>
+    <button type="button" id="btn">{% csrf_token %}Update</button>
 
 <script type="text/javascript">
-
     $(document).ready(function(){
-    $("#btn").click(function(){
-        $.ajax({
-            type: "GET",
-            url: "/test/",
-            dataType: "json",
-            data:{ csrfmiddlewaretoken: '{{ csrf_token }}' },
-            success: function(json) {
-                $("#output").html(json.temp);
-            },
-            error:function() {
-                alert("error!");
-            }
+        $("#btn").click(function(){
+            $.ajax({
+                type: "GET",
+                url: "/test/",
+                dataType: "json",
+                data:{ csrfmiddlewaretoken: '{{ csrf_token }}' },
+                success: function(json) {
+                    $("#output").html("<p> the temperature is" + json.temp + "and available memory is " json.mem_stats) + "<p>";
+                },
+                error:function() {
+                    alert("error!");
+                }
+            });
         });
     });
-    });
-
 </script>
 
 </body>
