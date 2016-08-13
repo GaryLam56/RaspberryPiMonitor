@@ -21,7 +21,9 @@
                 dataType: "json",
                 data:{ csrfmiddlewaretoken: '{{ csrf_token }}' },
                 success: function(json) {
-                    $("#output").html("<p> the temperature is " + json.temp + " and available memory is " + json.mem_stats + "<p>");
+                    $("#output").html(function() {
+                        return "<p> the temperature is " + json.temp + " and available memory is " + json.mem_stats + "<p>"
+                    });
                 },
                 error:function() {
                     alert("error!");
@@ -30,6 +32,5 @@
         });
     });
 </script>
-
 </body>
 </html>
