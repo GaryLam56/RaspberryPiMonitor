@@ -30,15 +30,12 @@
                                                     <div class='container'> \
                                                       <h2>Basic Progress Bar</h2> \
                                                       <div class='progress'> \
-                                                        <div class='progress-bar' id='memory' role='progressbar' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100'> \
+                                                        <div class='progress-bar' id='memory' role='progressbar' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100' onload='this.style.width=x;'> \
                                                           <span class='sr-only'>70% Complete</span> \
                                                         </div> \
                                                       </div> \
                                                     </div> \
-                                                    <script> \
-                                                    document.getElementById('memory').style.width = x; \
-                                                    </script> \
-                                            "
+                                "
                     });
                 },
                 error:function() {
