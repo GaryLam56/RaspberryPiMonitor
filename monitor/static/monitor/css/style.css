@@ -1,8 +1,6 @@
-{% load staticfiles %}
-
-@font-face{
+@font-face {
   font-family: phageRough;
-  src: url({% static 'monitor/fonts/Phage Rough.otf' %});
+  src:url("Phage Rough.otf");
 }
 
 body {
