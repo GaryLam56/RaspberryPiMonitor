@@ -5,6 +5,7 @@ from rest_framework import generics
 from monitor.serializers import PiSerializer
 from monitor.models import Raspberry
 from .forms import RaspberryForm
+from django.http import HttpResponse
 
 
 def index(request):
@@ -41,7 +42,7 @@ def test(request):
         temp = getTemperature()
         mem_stats = getRamStats()
         context = {"mem_stats": mem_stats, "temp": temp}
-        return render(request, 'monitor/index.html', context)
+        return HttpResponse("hi")
 
 
 class MonitorList(generics.ListCreateAPIView):
