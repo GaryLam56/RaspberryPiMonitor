@@ -1,6 +1,8 @@
+{% load staticfiles %}
+
 @font-face{
-  font-family: Phage Rough;
-  src: {% static 'monitor/fonts/Phage Rough.otf' %};
+  font-family: phageRough;
+  src: url({% static 'monitor/fonts/Phage Rough.otf' %});
 }
 
 body {
@@ -8,5 +10,5 @@ body {
 }
 
 h1 {
-  font-family: "Phage Rough";
+  font-family: phageRough, cursive;
 }
