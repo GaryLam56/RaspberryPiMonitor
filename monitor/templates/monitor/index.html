@@ -22,6 +22,9 @@
         $.ajax({
             type: "POST",
             url: "/test/",
+            data:{
+                csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+            },
             success:function() {
                 alert("updated!");
             },
