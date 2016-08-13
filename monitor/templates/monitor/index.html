@@ -37,12 +37,12 @@
                     var x = ((json.mem_used/json.mem_total) * 100);
                     console.log(x);
                     $("#memory").attr({
-                        "style": ("width:" + x + "%"),
+                        "style" : ("width:" + x + "%"),
                         "aria-valuemax": (json.mem_total),
                         "aria-valuenow": (json.mem_used)
                     });
-                }
-                error:function() {
+                },
+                error: function() {
                     alert("error!");
                 }
             });
