@@ -6,6 +6,7 @@ from monitor.serializers import PiSerializer
 from monitor.models import Raspberry
 from .forms import RaspberryForm
 from django.http import HttpResponse
+import json
 
 
 def index(request):
@@ -39,10 +40,10 @@ def getTemperature():
 
 def test(request):
     if request.method == 'POST':
-        temp = getTemperature()
-        mem_stats = getRamStats()
-        context = {"mem_stats": mem_stats, "temp": temp}
-        return HttpResponse("hi")
+        response_data = {}
+        response_data['temp'] = getTemperature()
+        response_data['mem_stats'] = getRamStats()
+        return HttpResponse(json.dumps(response_data), content_type="application/json")
 
 
 class MonitorList(generics.ListCreateAPIView):

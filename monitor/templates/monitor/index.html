@@ -10,6 +10,7 @@
 
     <p>{{ mem_stats }}</p>
     <p>{{ temp }}</p>
+    <p id="output">default</p>
     <button type="button" id="btn">{% csrf_token %}
         Update
     </button>
@@ -18,15 +19,16 @@
 
     $(document).ready(function(){
     $("#btn").click(function(){
-
         $.ajax({
-            type: "POST",
+            type: "GET",
             url: "/test/",
+            dataType: "json",
             data:{
                 csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
             },
-            success:function() {
-                alert("updated!");
+            success:function(json) {
+                $('#output').html(json.message);
+                alert("error!");
             },
             error:function() {
                 alert("error!");
