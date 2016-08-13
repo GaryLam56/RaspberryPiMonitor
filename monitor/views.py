@@ -7,7 +7,6 @@ from monitor.models import Raspberry
 from .forms import RaspberryForm
 from django.http import HttpResponse
 import json
-from django.views.decorators.csrf import csrf_exempt
 
 
 def index(request):
@@ -39,9 +38,8 @@ def getTemperature():
     return float(os.popen("sudo vcgencmd measure_temp").readline()[5:-3])
 
 
-@csrf_exempt
 def test(request):
-    if request.method == 'POST':
+    if request.method == 'GET':
         response_data = {}
         response_data['temp'] = getTemperature()
         response_data['mem_stats'] = int(getRamStats()[1][:-1])
