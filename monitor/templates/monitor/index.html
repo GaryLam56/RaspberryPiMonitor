@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <head>
     {% load staticfiles %}
     <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>Hello</title>
 </head>
 <body>
@@ -23,15 +23,16 @@
                 dataType: "json",
                 data:{ csrfmiddlewaretoken: '{{ csrf_token }}' },
                 success: function(json) {
-                    $("#output").html("" +
-                                "<div class="container">" +
-                                  "<h2>Basic Progress Bar</h2>" +
-                                  "<div class="progress">" +
-                                    "<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:100%">" +
-                                      "<span class="sr-only">json.temp</span>" +
-                                    "</div>" +
-                                  "</div>" +
-                                "</div>");
+                    $("#output").html("\
+                            <div class="container">\
+                              <h2>Basic Progress Bar</h2>\
+                              <div class="progress">\
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:100%">\
+                                  <span class="sr-only">70% Complete</span>\
+                                </div>\
+                              </div>\
+                            </div>\
+                    ");
                 },
                 error:function() {
                     alert("error!");
