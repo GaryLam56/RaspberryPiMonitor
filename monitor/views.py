@@ -70,7 +70,6 @@ def getCpuUsage():
     return [cpu1, cpu2, cpu3, cpu4]
 
 
-
 def test(request):
     if request.method == 'GET':
         response_data = {}
