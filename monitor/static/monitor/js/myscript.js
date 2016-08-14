@@ -17,7 +17,7 @@ function update() {
                     $("#pi-uptime").html(json.up_day + "d" + json.up_hour + "h" + json.up_minute + "m");
                     $("#buffer-percentage").html(((json.mem_buffer/json.mem_total) * 100) + "%");
                     $("#cache-percentage").html(((json.mem_cache/json.mem_total) * 100) + "%");
-                    $("#used-percentage").html(((json.mem_used/json.mem_total) * 100) + "%");
+                    $("#used-percentage-bar").html(((json.mem_used/json.mem_total) * 100) + "%");
                     $("#used-percentage").html(((json.mem_used/json.mem_total) * 100) + "%");
                     $("#free-percentage").html(((json.mem_avail/json.mem_total) * 100) + "%");
                     $("#cpu-temperature").html(json.temp + "°C");
