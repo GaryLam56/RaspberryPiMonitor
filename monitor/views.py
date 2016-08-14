@@ -49,10 +49,10 @@ def getCpuUsage():
     theLines.readline()
     theLines.readline()
     theLines.readline()
-    cpu1 = 100 - int(theLines.readline().split()[12])
-    cpu2 = 100 - int(theLines.readline().split()[12])
-    cpu3 = 100 - int(theLines.readline().split()[12])
-    cpu4 = 100 - int(theLines.readline().split()[12])
+    cpu1 = 100 - float(theLines.readline().split()[12])
+    cpu2 = 100 - float(theLines.readline().split()[12])
+    cpu3 = 100 - float(theLines.readline().split()[12])
+    cpu4 = 100 - float(theLines.readline().split()[12])
     return [cpu1, cpu2, cpu3, cpu4]
 
 
