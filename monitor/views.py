@@ -45,7 +45,9 @@ def getUptime():
 def getCpuUsage():
     # returns an array of cpu usage percentages
     theLines = os.popen("sudo mpstat -P ALL")
-    print(sys.stderr, os.popen("vcgencmd measure_temp").readline())
+    print(sys.stderr, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+    print(sys.stderr, os.popen("sudo mpstat -P ALL").readline())
+    print(sys.stderr, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
     theLines.readline()
     theLines.readline()
     theLines.readline()
