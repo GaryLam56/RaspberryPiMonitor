@@ -60,7 +60,7 @@ def getCpuUsage():
                     cpuUse = ''
                 cpuUse += x
             else:
-                percentage = ((totalCpu - idleCpu)/totalCpu) * 100)
+                percentage = (((totalCpu - idleCpu)/totalCpu) * 100)
                 return percentage
     theLines.readline()
     cpu1 = getPercentage(theLines.readline())
