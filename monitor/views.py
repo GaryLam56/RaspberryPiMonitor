@@ -59,10 +59,10 @@ def getCpuUsage():
     print(sys.stderr, c.split())
     print(sys.stderr, d.split())
     print(sys.stderr, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-    cpu1 = 100 - float(a.split()[12])
-    cpu2 = 100 - float(b.split()[12])
-    cpu3 = 100 - float(c.split()[12])
-    cpu4 = 100 - float(d.split()[12])
+    cpu1 = 100 - float(a.split()[11])
+    cpu2 = 100 - float(b.split()[11])
+    cpu3 = 100 - float(c.split()[11])
+    cpu4 = 100 - float(d.split()[11])
     return [cpu1, cpu2, cpu3, cpu4]
 
 
