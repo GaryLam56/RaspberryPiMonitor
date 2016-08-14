@@ -18,6 +18,7 @@ function update() {
                     $("#buffer-percentage").html(((json.mem_buffer/json.mem_total) * 100) + "%");
                     $("#cache-percentage").html(((json.mem_cache/json.mem_total) * 100) + "%");
                     $("#used-percentage").html(((json.mem_used/json.mem_total) * 100) + "%");
+                    $("#used-percentage").html(((json.mem_used/json.mem_total) * 100) + "%");
                     $("#free-percentage").html(((json.mem_avail/json.mem_total) * 100) + "%");
                     $("#cpu-temperature").html(json.temp + "°C");
                     $("#processor0").html(json.cpu0 + "%");
