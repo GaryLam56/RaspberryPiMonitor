@@ -44,29 +44,15 @@ def getUptime():
 
 def getCpuUsage():
     # returns an array of cpu usage percentages
-    theLines = os.popen("cat /proc/stat")
-    def getPercentage(line):
-        w = 0
-        totalCpu = 0
-        idleCpu = 0
-        cpuUse = ''
-        for x in line[5:]:
-            if w < 5:
-                if x == ' ':
-                    totalCpu = totalCpu + int(cpuUse)
-                    w += 1
-                    if w == 4:
-                        idleCpu = int(cpuUse)
-                    cpuUse = ''
-                cpuUse += x
-            else:
-                percentage = (((totalCpu - idleCpu)/totalCpu) * 100)
-                return percentage
+    theLines = os.popen("mpstat -P ALL")
     theLines.readline()
-    cpu1 = getPercentage(theLines.readline())
-    cpu2 = getPercentage(theLines.readline())
-    cpu3 = getPercentage(theLines.readline())
-    cpu4 = getPercentage(theLines.readline())
+    theLines.readline()
+    theLines.readline()
+    theLines.readline()
+    cpu1 = 100 - int(theLines.readline().split()[12])
+    cpu2 = 100 - int(theLines.readline().split()[12])
+    cpu3 = 100 - int(theLines.readline().split()[12])
+    cpu4 = 100 - int(theLines.readline().split()[12])
     return [cpu1, cpu2, cpu3, cpu4]
 
 
