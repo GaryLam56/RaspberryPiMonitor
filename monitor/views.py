@@ -30,7 +30,7 @@ def getRamStats():
     free.readline()
     line = free.readline()
     # total, used, and free ram
-    return line.split()[1:4]
+    return line.split()[1:7]
 
 
 def getTemperature():
