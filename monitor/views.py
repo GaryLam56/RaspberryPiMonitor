@@ -45,17 +45,18 @@ def getUptime():
 def getCpuUsage():
     # returns an array of cpu usage percentages
     theLines = os.popen("sudo mpstat -P ALL")
-    print(sys.stderr, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-    print(sys.stderr, os.popen("sudo mpstat -P ALL").readline())
-    print(sys.stderr, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
     theLines.readline()
     theLines.readline()
     theLines.readline()
     theLines.readline()
-    cpu1 = 100 - float(theLines.readline().split()[12])
-    cpu2 = 100 - float(theLines.readline().split()[12])
-    cpu3 = 100 - float(theLines.readline().split()[12])
-    cpu4 = 100 - float(theLines.readline().split()[12])
+    a = theLines.readline()
+    b = theLines.readline()
+    c = theLines.readline()
+    d = theLines.readline()
+    cpu1 = 100 - float(a.split()[12])
+    cpu2 = 100 - float(b.split()[12])
+    cpu3 = 100 - float(c.split()[12])
+    cpu4 = 100 - float(d.split()[12])
     return [cpu1, cpu2, cpu3, cpu4]
 
 
