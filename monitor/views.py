@@ -42,7 +42,7 @@ def getUptime():
     return os.popen("uptime").readline()
 
 
-def cpuUsage():
+def getCpuUsage():
     # returns an array of cpu usage percentages
     theLines = os.popen("cat /proc/stat")
     def getPercentage(line):
@@ -60,8 +60,6 @@ def cpuUsage():
                     cpuUse = ''
                 cpuUse += x
             else:
-                print("totalCpu is " + str(totalCpu))
-                print("idleCpu is " + str(idleCpu))
                 percentage = ((totalCpu - idleCpu)/totalCpu) * 100
                 return percentage
     theLines.readline()
@@ -85,6 +83,11 @@ def test(request):
         response_data['up_day'] = int(getUptime()[13:15])
         response_data['up_hour'] = int(getUptime()[22:24])
         response_data['up_minute'] = int(getUptime()[25:27])
+        cpuList = getCpuUsage()
+        response_data['cpu0'] = cpuList[0]
+        response_data['cpu1'] = cpuList[1]
+        response_data['cpu2'] = cpuList[2]
+        response_data['cpu3'] = cpuList[3]
         return HttpResponse(json.dumps(response_data), content_type="application/json")
 
 

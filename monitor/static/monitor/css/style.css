@@ -1,0 +1,20 @@
+@font-face {
+  font-family: phageRough;
+  src:url("Phage Rough.otf");
+}
+
+body {
+  background-color:	#f7f7f7;
+}
+
+h2 {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+.navbar-brand {
+  font-family: phageRough, cursive;
+}
+
+#inside {
+	margin: 10px 15px 10px 15px;
+}
