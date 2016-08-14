@@ -44,7 +44,7 @@ def getUptime():
 
 def getCpuUsage():
     # returns an array of cpu usage percentages
-    theLines = os.popen("mpstat -P ALL")
+    theLines = os.popen("sudo mpstat -P ALL")
     theLines.readline()
     theLines.readline()
     theLines.readline()
