@@ -7,6 +7,8 @@ from monitor.models import Raspberry
 from .forms import RaspberryForm
 from django.http import HttpResponse
 import json
+import re
+import time
 
 
 def index(request):
@@ -43,21 +45,45 @@ def getUptime():
 
 
 def getCpuUsage():
-    # returns an array of cpu usage percentages
-    theLines = os.popen("sudo mpstat -P ALL")
-    theLines.readline()
-    theLines.readline()
-    theLines.readline()
-    theLines.readline()
-    a = theLines.readline()
-    b = theLines.readline()
-    c = theLines.readline()
-    d = theLines.readline()
-    cpu1 = 100 - float(a.split()[11])
-    cpu2 = 100 - float(b.split()[11])
-    cpu3 = 100 - float(c.split()[11])
-    cpu4 = 100 - float(d.split()[11])
-    return [cpu1, cpu2, cpu3, cpu4]
+    class PiStats(object):
+        def __init__(self, w):
+            self.lastCPUInfo = {'total':0, 'active':0}
+            self.currentCPUInfo = {'total':0, 'active':0, 'w':w}
+            self.temp_in_celsius = None
+
+        def calculate_cpu_percentage(self):
+            total_diff = self.currentCPUInfo['total'] - self.lastCPUInfo['total']
+            active_diff = self.currentCPUInfo['active'] - self.lastCPUInfo['active']
+            return round(float(active_diff) / float(total_diff), 3) * 100.00
+
+        def update_stats(self):
+            self.lastCPUInfo['total'] = self.currentCPUInfo['total']
+            self.lastCPUInfo['active'] = self.currentCPUInfo['active']
+            self.currentCPUInfo['total'] = 0
+            with open('/proc/stat', 'r') as cpu_file:
+                for i, line in enumerate(cpu_file):
+                    if i == w:
+                        cpuStats = re.findall('([0-9]+)', line.strip())
+                        self.currentCPUInfo['idle'] = int(cpuStats[3]) + int(cpuStats[4])
+                        for t in cpuStats:
+                            self.currentCPUInfo['total'] += int(t)
+
+                        self.currentCPUInfo['active'] = self.currentCPUInfo['total'] - self.currentCPUInfo['idle']
+                        self.currentCPUInfo['percent'] = self.calculate_cpu_percentage()
+
+        def get_cpu_info(self):
+            return self.currentCPUInfo
+
+    w = 0
+    list_cpu_percentage = []
+    while w < 4:
+        stats = PiStats(w)
+        stats.update_stats()
+        time.sleep(1)
+        stats.update_stats()
+        cpu_info = stats.get_cpu_info()
+        list_cpu_percentage.append(round(cpu_info['percent'], 3))
+    return list_cpu_percentage
 
 
 def test(request):
@@ -70,11 +96,11 @@ def test(request):
         response_data['mem_buffer'] = int(getRamStats()[4][:-1])
         response_data['mem_cache'] = int(getRamStats()[5][:-1])
         response_data['up_time'] = getUptime()
-        cpuList = getCpuUsage()
-        response_data['cpu0'] = cpuList[0]
-        response_data['cpu1'] = cpuList[1]
-        response_data['cpu2'] = cpuList[2]
-        response_data['cpu3'] = cpuList[3]
+        cpu_list = getCpuUsage()
+        response_data['cpu0'] = cpu_list[0]
+        response_data['cpu1'] = cpu_list[1]
+        response_data['cpu2'] = cpu_list[2]
+        response_data['cpu3'] = cpu_list[3]
         return HttpResponse(json.dumps(response_data), content_type="application/json")
 
 
