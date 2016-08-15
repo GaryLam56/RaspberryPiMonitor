@@ -55,12 +55,10 @@ def cpuUsage():
                 if x == ' ':
                     totalCpu = totalCpu + int(cpuUse)
                     w += 1
-                    print(w)
                     if w == 4:
                         idleCpu = int(cpuUse)
                     cpuUse = ''
                 cpuUse += x
-                print("x is " + x)
             else:
                 print("totalCpu is " + str(totalCpu))
                 print("idleCpu is " + str(idleCpu))
