@@ -22,9 +22,21 @@ function update() {
                     $("#free-percentage").html(json.mem_avail + "MB");
                     $("#cpu-temperature").html(json.temp + "°C");
                     $("#processor0").html(json.cpu0 + "%");
+                    $("#processor0").attr({
+                        "style": ("width:" + json.cpu0 + "%"),
+                    });
                     $("#processor1").html(json.cpu1 + "%");
+                    $("#processor1").attr({
+                        "style": ("width:" + json.cpu1 + "%"),
+                    });
                     $("#processor2").html(json.cpu2 + "%");
+                    $("#processor2").attr({
+                        "style": ("width:" + json.cpu2 + "%"),
+                    });
                     $("#processor3").html(json.cpu3 + "%");
+                    $("#processor3").attr({
+                        "style": ("width:" + json.cpu3 + "%"),
+                    });
                 },
                 error: function () {
                     alert("error!");
