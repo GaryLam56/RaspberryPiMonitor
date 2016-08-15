@@ -14,7 +14,7 @@ SECRET_KEY = '=3ai06-$-wrhepsh2o)dq2ys^o8y!v+al1so*^z1c2gevwk-iu'
 #DEBUG = False
 DEBUG = True
 ALLOWED_HOST = []
-#ALLOWED_HOSTS = ['.perfectkiwi.xyz']
+#ALLOWED_HOSTS = ['209.6.200.230']
 
 
 # Application definition

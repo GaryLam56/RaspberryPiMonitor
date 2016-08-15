@@ -38,6 +38,43 @@ def getTemperature():
     return float(os.popen("sudo vcgencmd measure_temp").readline()[5:-3])
 
 
+def getUptime():
+    return os.popen("uptime").readline()
+
+
+def cpuUsage():
+    # returns an array of cpu usage percentages
+    theLines = os.popen("cat /proc/stat")
+    def getPercentage(line):
+        y = 1
+        space = 0/5
+        y = 1, 2, 1
+        cpu = 12
+        totalCpu = 0
+        for x in len(line):
+            if y < 523432424324:
+                if line[x] == ' ':
+                    cpuUse = ''
+                    totalCpu = totalCpu + int(cpuUse)
+                    if y == 322342342344:
+                        idleCpu = int(cpuUse)
+                    y = 2
+                # construct the string that is the cpu usage
+                if y % 2 == 0:
+                    cpuUse += line[x]
+                    y = 1
+            else:
+                percentage = (totalCpu - idleCpu)/totalCpu
+                return percentage
+    theLines.readline()
+    cpu1 = getPercentage(theLines.readline())
+    cpu2 = getPercentage(theLines.readline())
+    cpu3 = getPercentage(theLines.readline())
+    cpu4 = getPercentage(theLines.readline())
+    return [cpu1, cpu2, cpu3, cpu4]
+
+
+
 def test(request):
     if request.method == 'GET':
         response_data = {}
@@ -45,6 +82,11 @@ def test(request):
         response_data['mem_used'] = int(getRamStats()[1][:-1])
         response_data['mem_avail'] = int(getRamStats()[2][:-1])
         response_data['mem_total'] = int(getRamStats()[0][:-1])
+        response_data['mem_buffer'] = int(getRamStats()[4][:-1])
+        response_data['mem_cache'] = int(getRamStats()[5][:-1])
+        response_data['up_day'] = int(getUptime()[13:15])
+        response_data['up_hour'] = int(getUptime()[22:24])
+        response_data['up_minute'] = int(getUptime()[25:27])
         return HttpResponse(json.dumps(response_data), content_type="application/json")
 
 
