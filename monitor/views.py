@@ -79,10 +79,11 @@ def getCpuUsage():
     while w < 4:
         stats = PiStats(w)
         stats.update_stats()
-        time.sleep(1);
+        time.sleep(1)
         stats.update_stats()
         cpu_info = stats.get_cpu_info()
         list_cpu_percentage.append(round(cpu_info['percent'], 3))
+        w += 1
     return list_cpu_percentage
 
 
