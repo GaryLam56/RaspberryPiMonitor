@@ -46,25 +46,25 @@ def cpuUsage():
     # returns an array of cpu usage percentages
     theLines = os.popen("cat /proc/stat")
     def getPercentage(line):
-        y = 1
-        space = 0/5
-        y = 1, 2, 1
-        cpu = 12
+        w = 0
         totalCpu = 0
-        for x in len(line):
-            if y < 523432424324:
-                if line[x] == ' ':
-                    cpuUse = ''
+        idleCpu = 0
+        cpuUse = ''
+        for x in line[5:]:
+            if w < 5:
+                if x == ' ':
                     totalCpu = totalCpu + int(cpuUse)
-                    if y == 322342342344:
+                    w += 1
+                    print(w)
+                    if w == 4:
                         idleCpu = int(cpuUse)
-                    y = 2
-                # construct the string that is the cpu usage
-                if y % 2 == 0:
-                    cpuUse += line[x]
-                    y = 1
+                    cpuUse = ''
+                cpuUse += x
+                print("x is " + x)
             else:
-                percentage = (totalCpu - idleCpu)/totalCpu
+                print("totalCpu is " + str(totalCpu))
+                print("idleCpu is " + str(idleCpu))
+                percentage = ((totalCpu - idleCpu)/totalCpu) * 100
                 return percentage
     theLines.readline()
     cpu1 = getPercentage(theLines.readline())
