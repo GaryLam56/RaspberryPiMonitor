@@ -39,7 +39,7 @@ def getTemperature():
 
 
 def getUptime():
-    return os.popen("uptime -p").readline().split()
+    return os.popen("uptime -p").readline()[3:]
 
 
 def getCpuUsage():
@@ -53,12 +53,6 @@ def getCpuUsage():
     b = theLines.readline()
     c = theLines.readline()
     d = theLines.readline()
-    print(sys.stderr, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-    print(sys.stderr, a.split())
-    print(sys.stderr, b.split())
-    print(sys.stderr, c.split())
-    print(sys.stderr, d.split())
-    print(sys.stderr, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
     cpu1 = 100 - float(a.split()[11])
     cpu2 = 100 - float(b.split()[11])
     cpu3 = 100 - float(c.split()[11])
@@ -75,10 +69,7 @@ def test(request):
         response_data['mem_total'] = int(getRamStats()[0][:-1])
         response_data['mem_buffer'] = int(getRamStats()[4][:-1])
         response_data['mem_cache'] = int(getRamStats()[5][:-1])
-        response_data['up_week'] = int(getUptime()[1])
-        response_data['up_day'] = int(getUptime()[3])
-        response_data['up_hour'] = int(getUptime()[5])
-        response_data['up_minute'] = int(getUptime()[7])
+        response_data['up_time'] = getUptime()
         cpuList = getCpuUsage()
         response_data['cpu0'] = cpuList[0]
         response_data['cpu1'] = cpuList[1]
