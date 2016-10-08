@@ -91,11 +91,11 @@ def test(request):
     if request.method == 'GET':
         response_data = {}
         response_data['temp'] = getTemperature()
-        response_data['mem_used'] = int(getRamStats()[1][:-1])
-        response_data['mem_avail'] = int(getRamStats()[2][:-1])
-        response_data['mem_total'] = int(getRamStats()[0][:-1])
+        response_data['mem_used'] = float(getRamStats()[1][:-1])
+        response_data['mem_avail'] = float(getRamStats()[2][:-1])
+        response_data['mem_total'] = float(getRamStats()[0][:-1])
         response_data['mem_buffer'] = float(getRamStats()[4][:-1])
-        response_data['mem_cache'] = int(getRamStats()[5][:-1])
+        response_data['mem_cache'] = float(getRamStats()[5][:-1])
         response_data['up_time'] = getUptime()
         cpu_list = getCpuUsage()
         response_data['cpu0'] = cpu_list[0]
