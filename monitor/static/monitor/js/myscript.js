@@ -15,7 +15,7 @@ function update() {
                     $("#pi-uptime").html(json.up_time);
                     $("#buffer-percentage").html(json.mem_buffer + "MB");
                     $("#cache-percentage").html(json.mem_cache + "MB");
-                    $("#used-percentage-bar").html(((x) + "%");
+                    $("#used-percentage-bar").html((x) + "%");
                     $("#used-percentage").html(json.mem_used + "MB");
                     $("#free-percentage").html(json.mem_avail + "MB");
                     $("#cpu-temperature").html(json.temp + "°C");
