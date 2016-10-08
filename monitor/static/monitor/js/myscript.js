@@ -8,7 +8,7 @@ function update() {
                 data: {csrfmiddlewaretoken: '{{ csrf_token }}'},
                 success: function (json) {
                     var x = ((json.mem_used / json.mem_total) * 100);
-                    $("#memory").attr({
+                    $("#used-percentage-bar").attr({
                         "style": ("width:" + x + "%"),
                         "aria-valuemax": (json.mem_total),
                         "aria-valuenow": (json.mem_used),
