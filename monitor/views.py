@@ -13,7 +13,7 @@ import time
 def index(request):
     # if user is not logged in make them
     if not request.user.is_authenticated():
-        return render(request, 'monitor/login_user.html')
+        return render(request, 'monitor/login.html')
     else:
         return render(request, 'monitor/index.html')
 
