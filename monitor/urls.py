@@ -7,7 +7,7 @@ app_name = 'monitor'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     # url(r'^api/$', views.MonitorList.as_view()),
-    url(r'^$login/$', views.login_user, name='login_user'),
+    url(r'^login/$', views.login_user, name='login_user'),
     url(r'^test/$', views.test, name='test'),
 ]
 
