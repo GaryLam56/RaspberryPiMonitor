@@ -94,7 +94,7 @@ def test(request):
         response_data['mem_used'] = int(getRamStats()[1][:-1])
         response_data['mem_avail'] = int(getRamStats()[2][:-1])
         response_data['mem_total'] = int(getRamStats()[0][:-1])
-        response_data['mem_buffer'] = int(getRamStats()[4][:-1])
+        response_data['mem_buffer'] = float(getRamStats()[4][:-1])
         response_data['mem_cache'] = int(getRamStats()[5][:-1])
         response_data['up_time'] = getUptime()
         cpu_list = getCpuUsage()
