@@ -31,6 +31,7 @@ def login_user(request):
             return render(request, 'monitor/login.html', {'error_message': 'Invalid login'})
     return render(request, 'monitor/login.html')
 
+
 def getRamStats():
     free = os.popen("free -h")
     free.readline()

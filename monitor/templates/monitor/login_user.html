@@ -9,7 +9,7 @@
 	<div class="wrapper">
 		{% if error_message %}
 		<p><strong>{{ error_message }}</strong></p>
-		% endif %}
+		{% endif %}
 		<form action="{% url 'monitor:login_user'%}" method="post" name="Login_Form" class="form-signin">
 			{% csrf_token %}
 		    <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
