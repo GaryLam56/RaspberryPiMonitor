@@ -13,7 +13,7 @@ import time
 def index(request):
     # if user is not logged in make them
     if not request.user.is_authenticated():
-        return render(request, 'monitor/login.html')
+        return render(request, 'monitor/login_user.html')
     else:
         return render(request, 'monitor/index.html')
 
@@ -28,8 +28,8 @@ def login_user(request):
                 login(request, user)
                 return render(request, 'monitor/index.html')
         else:
-            return render(request, 'monitor/login.html', {'error_message': 'Invalid login'})
-    return render(request, 'monitor/login.html')
+            return render(request, 'monitor/login_user.html', {'error_message': 'Invalid login'})
+    return render(request, 'monitor/login_user.html')
 
 
 def getRamStats():
