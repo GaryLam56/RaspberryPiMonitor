@@ -1,6 +1,5 @@
 function update() {
     $(document).ready(function () {
-        $("#update-btn").click(function () {
             $.ajax({
                 type: "GET",
                 url: "/test/",
@@ -41,6 +40,5 @@ function update() {
                     alert("error!");
                 }
             });
-        });
     });
 }

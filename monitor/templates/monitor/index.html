@@ -169,7 +169,9 @@
 
     <!-- <button type="button" id="update-btn">{% csrf_token %}Update</button> -->
 <script>
-	setInterval(update(),4000);
+	setInterval(function(){
+		update();
+	}, 4000);
 </script>
 </body>
 </html>
