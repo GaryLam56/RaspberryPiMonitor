@@ -1,10 +1,9 @@
 from django.shortcuts import render
+from django.contrib.auth import authenticate, login
 import os
-import sys
 from rest_framework import generics
 from monitor.serializers import PiSerializer
 from monitor.models import Raspberry
-from .forms import RaspberryForm
 from django.http import HttpResponse
 import json
 import re
@@ -13,19 +12,24 @@ import time
 
 def index(request):
     # if user is not logged in make them
-    #if not request.user.is_authenticated():
-    #   return render(request, 'monitor/login_user.html')
-    #else:
-    mem_stats = getRamStats()
-    temp = getTemperature()
-    form = RaspberryForm(request.POST or None, request.FILES or None)
-    pi = form.save(commit=False)
-    pi.temperature = temp
-    pi.memory_used = int(mem_stats[1][:-1])
-    pi.save()
-    context = {"mem_stats": mem_stats, "temp": temp}
-    return render(request, 'monitor/index.html', context)
+    if not request.user.is_authenticated():
+        return render(request, 'monitor/login_user.html')
+    else:
+        return render(request, 'monitor/index.html')
 
+
+def login_user(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                return render(request, 'monitor/index.html')
+        else:
+            return render(request, 'monitor/login.html', {'error_message': 'Invalid login'})
+    return render(request, 'monitor/login.html')
 
 def getRamStats():
     free = os.popen("free -h")
